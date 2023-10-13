@@ -8,20 +8,13 @@
 #   O Any é qualquer objeto, de forma a que a cada individuo fique associado um objeto desse tipo
 
 
-Individual = tuple[float, type]
+def new_individual(creation_time, core):
+    return (creation_time, core)
 
 
-def new_individual(age: float, core: type) -> Individual:
-    return (age, core)
-
-
-def age(current_time: float, individual: Individual) -> float:
+def age(current_time, individual):
     return current_time - individual[0]
 
 
-def get_core(individual: Individual) -> type:
+def get_core(individual):
     return individual[1]
-
-
-def update_core(individual: Individual, new_core: type) -> Individual:
-    return (individual[0], new_core)

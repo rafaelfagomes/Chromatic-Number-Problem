@@ -7,20 +7,18 @@
 #   O float representa o tempo em que o evento deve ser realizado, a str representa o tipo do evento
 #   O int representa o identificador do individuo associado ao evento
 
-Event = tuple[float, str, int]
 
-
-def new_event(time: float, kind: str, object_identifier: int) -> Event:
+def new_event(time, kind, object_identifier=-1):
     return (time, kind, object_identifier)
 
 
-def time(event: Event) -> float:
+def time(event):
     return event[0]
 
 
-def kind(event: Event) -> str:
+def kind(event):
     return event[1]
 
 
-def object_identifier(event: Event) -> int:
+def object_identifier(event):
     return event[2]
